@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this software in research, cite this software record and report your metric and judge configurations."
+title: "RAG Evaluation Toolkit"
+type: software
+authors:
+  - name: "lordarcane666"
+version: 0.1.0
+date-released: 2026-11-04
+license: Apache-2.0
+repository-code: "https://github.com/lordarcane666/rag-evaluation-toolkit"
+abstract: "An extensible Python toolkit for deterministic RAG metrics, optional model-based evaluation, reproducible benchmarks, and detailed reports."

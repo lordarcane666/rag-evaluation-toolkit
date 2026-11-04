@@ -1,0 +1,12 @@
+{
+  "name": "synthetic-two-dataset-comparison",
+  "baseline": "baseline",
+  "evaluation": {"metrics": ["exact_match", "token_f1", "context_precision", "context_recall"], "k": 2},
+  "regression_threshold": 0.01,
+  "runs": [
+    {"dataset": "general", "configuration": "baseline", "path": "demo.jsonl"},
+    {"dataset": "general", "configuration": "candidate", "path": "candidate.jsonl"},
+    {"dataset": "operations", "configuration": "baseline", "path": "operations-baseline.jsonl"},
+    {"dataset": "operations", "configuration": "candidate", "path": "operations-candidate.jsonl"}
+  ]
+}
