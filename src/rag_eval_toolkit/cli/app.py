@@ -1,3 +1,4 @@
+
 """Dependency-light argparse CLI with machine-readable stdout and useful exit codes."""
 
 from __future__ import annotations
@@ -162,11 +163,11 @@ def _run(args: argparse.Namespace) -> int:
         return 0
     if args.command == "evaluate":
         names = tuple(name.strip() for name in args.metrics.split(","))
-        configuration = EvaluationConfig(
+        evaluation_config = EvaluationConfig(
             metrics=names, k=args.k, enable_llm=args.enable_llm, fail_fast=args.fail_fast,
         )
-        judge = _judge(args, configuration)
-        evaluator = Evaluator(configuration, judge=judge)
+        judge = _judge(args, evaluation_config)
+        evaluator = Evaluator(evaluation_config, judge=judge)
         timestamp = _timestamp(args.timestamp)
         dataset = load_dataset(args.dataset)
         report = evaluator.evaluate(dataset, timestamp=timestamp)
